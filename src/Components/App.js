@@ -16,9 +16,7 @@ function App() {
   const [country, setCountry] = useState('worldwide')
   const [countryInfo, setCountryInfo] = useState({})
   const [tableData, setTableData] = useState([])
-  const [mapCenter, setMapCenter] = useState({
-    lat: 34.80746, lng: -40.4796
-  })
+  const [mapPosition, setMapPosition] = useState([34, -40])
   const [mapZoom, setMapZoom] = useState(3)
 
   useEffect(() => {
@@ -59,11 +57,12 @@ function App() {
     .then(data => {
       setCountry(countryCode)
       setCountryInfo(data)
-      setMapCenter([data.countryInfo.lat, data.countryInfo.long])
+      setMapPosition([data.countryInfo.lat, data.countryInfo.long])
       setMapZoom(4)
     })
   }
   console.log(countryInfo)
+  console.log(mapPosition)
   return (
     <div className="app">
       <div className="app__leftSide">
@@ -101,7 +100,11 @@ function App() {
           total={countryInfo.deaths}
           />
       </div>
-      <Map center={mapCenter} zoom={mapZoom}/>
+      <Map
+      center={mapPosition}
+      zoom={mapZoom}
+      country={country}
+      />
 
       </div>
       <Card className="app__rightSide">
