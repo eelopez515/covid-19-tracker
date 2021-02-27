@@ -119,7 +119,6 @@ function App() {
       center={mapPosition}
       zoom={mapZoom}
       />
-fire
       </div>
       <Card className="app__rightSide">
         <CardContent>
