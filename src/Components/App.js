@@ -6,7 +6,7 @@ import Map from './Map'
 import Table from './Table'
 import LineGraph from './LineGraph'
 // Util
-import { sortData } from '../util'
+import { sortData, pretty } from '../util'
 // Style
 import '../Styles/App.css';
 import 'leaflet/dist/leaflet.css'
@@ -15,9 +15,11 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('worldwide')
   const [countryInfo, setCountryInfo] = useState({})
+  const [mapCountries, setMapCountries] = useState([])
   const [tableData, setTableData] = useState([])
-  const [mapPosition, setMapPosition] = useState([34, -40])
-  const [mapZoom, setMapZoom] = useState(3)
+  const [mapPosition, setMapPosition] = useState([30, 0])
+  const [mapZoom, setMapZoom] = useState(2)
+  const [casesType, setCasesType] = useState('cases')
 
   useEffect(() => {
     fetch('https://disease.sh/v3/covid-19/all')
@@ -40,6 +42,7 @@ function App() {
         ))
         const sortedData = sortData(data)
         setTableData(sortedData)
+        setMapCountries(data)
         setCountries(countries)
       })
     }
@@ -85,25 +88,33 @@ function App() {
       </div>
       <div className="app__stats">
           <InfoBox
+          onClick={(e) => setCasesType('cases')}
           title='Coronavirus Cases'
-          cases={countryInfo.todayCases}
-          total={countryInfo.cases}
+          isRed
+          active={casesType === 'cases'}
+          cases={pretty(countryInfo.todayCases)}
+          total={pretty(countryInfo.cases)}
           />
           <InfoBox
+          onClick={(e) => setCasesType('recovered')}
           title='Recovered'
-          cases={countryInfo.todayRecovered}
-          total={countryInfo.recovered}
+          active={casesType === 'recovered'}
+          cases={pretty(countryInfo.todayRecovered)}
+          total={pretty(countryInfo.recovered)}
           />
           <InfoBox
+          onClick={(e) => setCasesType('deaths')}
           title='Deaths'
-          cases={countryInfo.todayDeaths}
-          total={countryInfo.deaths}
+          active={casesType === 'deaths'}
+          cases={pretty(countryInfo.todayDeaths)}
+          total={pretty(countryInfo.deaths)}
           />
       </div>
       <Map
+      casesType={casesType}
+      countries={mapCountries}
       center={mapPosition}
       zoom={mapZoom}
-      country={country}
       />
 
       </div>

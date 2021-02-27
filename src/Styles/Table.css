@@ -1,6 +1,8 @@
 .table {
   margin-top: 20px;
   overflow: scroll;
+  overflow-x: hidden;
+  background-color: white;
   height: 400px;
 }
 
@@ -10,9 +12,18 @@
 
 .table td {
   padding: 0.5rem;
+  border: none;
 }
 
 .table tr {
   display: flex;
   justify-content: space-between;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 30%;
 }
