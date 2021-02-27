@@ -40,7 +40,7 @@ function App() {
             value: country.countryInfo.iso2
           }
         ))
-        const sortedData = sortData(data)
+        let sortedData = sortData(data)
         setTableData(sortedData)
         setMapCountries(data)
         setCountries(countries)
@@ -48,6 +48,7 @@ function App() {
     }
     getCountriesData()
   }, [])
+  console.log(countries)
 
   const onCountryChange = async (e) => {
     const countryCode = e.target.value
@@ -60,7 +61,7 @@ function App() {
     .then(data => {
       setCountry(countryCode)
       setCountryInfo(data)
-      setMapPosition([data.countryInfo.lat, data.countryInfo.long])
+      // setMapPosition([data.countryInfo.lat, data.countryInfo.long])
       setMapZoom(4)
     })
   }
@@ -88,14 +89,15 @@ function App() {
       </div>
       <div className="app__stats">
           <InfoBox
+          isOrange
           onClick={(e) => setCasesType('cases')}
           title='Coronavirus Cases'
-          isRed
           active={casesType === 'cases'}
           cases={pretty(countryInfo.todayCases)}
           total={pretty(countryInfo.cases)}
           />
           <InfoBox
+          isGreen
           onClick={(e) => setCasesType('recovered')}
           title='Recovered'
           active={casesType === 'recovered'}
@@ -103,6 +105,7 @@ function App() {
           total={pretty(countryInfo.recovered)}
           />
           <InfoBox
+          isRed
           onClick={(e) => setCasesType('deaths')}
           title='Deaths'
           active={casesType === 'deaths'}
@@ -120,10 +123,10 @@ function App() {
       </div>
       <Card className="app__rightSide">
         <CardContent>
-          <h3>Live Cases by Country</h3>
+          <h3>Total Cases by Country</h3>
           <Table countries={tableData} />
-          <h3>Worldwide New Cases</h3>
-          <LineGraph />
+          <h3>Worldwide new {casesType}<span className='lastThirty'> (last 30 days)</span></h3>
+          <LineGraph className='app__graph' casesType={casesType} />
         </CardContent>
       </Card>
     </div>

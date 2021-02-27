@@ -25,8 +25,8 @@ const options = {
         xAxes: [
             {
             type: 'time',
-            time: {
-                parser: 'MM/DD/YY',
+            parser: {
+                format: 'MM/DD/YY',
                 tooltipFormat: 'll'
             },
         },
@@ -46,10 +46,10 @@ const options = {
     },
 }
 
-function LineGraph({ casesType = 'cases' }) {
+function LineGraph({ casesType, ...props }) {
     const [data, setData] = useState({})
 
-    const buildChartData = (data, casesType = 'cases') => {
+    const buildChartData = (data, casesType ) => {
         const chartData = []
         let lastDataPoint
     
@@ -68,10 +68,10 @@ function LineGraph({ casesType = 'cases' }) {
 
     useEffect(() => {
         const fetchData = async () => {
-            await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=120')
+            await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=30')
             .then(response => response.json())
             .then(data => {
-                const chartData = buildChartData(data)
+                let chartData = buildChartData(data, casesType)
                 setData(chartData)
             })
         }
@@ -79,7 +79,7 @@ function LineGraph({ casesType = 'cases' }) {
     }, [casesType])
 
     return (
-        <div>
+        <div className={props.className}>
             {data?.length > 0 && (
                 <Line
                 data={{

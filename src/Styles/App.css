@@ -18,14 +18,40 @@ body {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+.app__dropdown {
+  background-color: white;
+}
 
 .app__leftSide {
   flex: 0.9;
 }
 
+.app__rightSide {
+  display: flex;
+  flex-direction: column;
+}
+
 .app__stats {
   display: flex;
   justify-content: space-between;
+}
+
+.app__rightSide .MuiCardContent-root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.app__graph {
+  flex-grow: 1;
+}
+
+.lastThirty {
+  font-size: 12px;
+}
+
+.todayCasesNum {
+  font-size: 12px;
 }
 
 @media (max-width: 990px) {
