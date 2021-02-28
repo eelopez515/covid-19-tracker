@@ -59,12 +59,11 @@ function Map({ center, zoom, countries, casesType }) {
 ```
 
 ## Features
-List of features ready and TODOs for future development
 * Shows Circles on Map that represents covid-19 data
 * Shows Data for different countries
 * Shows Graph representing covid-19 data
 
-To-do list:
+To-do list for future versions:
 * Dark Mode to make the App easier on the eyes in the dark
 * When choosing a country the Map will zoom in on that country
 
