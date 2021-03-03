@@ -1,5 +1,5 @@
 # Covid-19 Tracker
-> A Covid-19 tracker that compiles and presents data in real-time from around the world in a clean, simple style. This includes the total number of cases, deaths, and recoveries per country and worldwide. The app uses a world map with population circles to represent the concentration of cases within each country, as well a combination of charts and graphs to display the figures as they update regularly.
+> A Covid-19 tracker that compiles and presents real-time data in a clean, simple style. This includes the total number of cases, deaths, and recoveries per country and worldwide. The app uses a world map with population circles to represent the concentration of cases within each country, as well a combination of charts and graphs to display the figures as they update regularly.
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
