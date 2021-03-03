@@ -1,6 +1,5 @@
 # Covid-19 Tracker
-> A Simple Covid-19 tracker that shows you information dealing with the corona virus including the number of cases, the number of people recovered and the number of deaths by country or worldwide. The app also has a map that uses circles to point out the countries with the highest amount of cases, recoveries, or death.
-
+> A Covid-19 tracker that compiles and presents data in real-time from around the world in a clean, simple style. This includes the total number of cases, deaths, and recoveries per country and worldwide. The app uses a world map with population circles to represent the concentration of cases within each country, as well a combination of charts and graphs to display the figures as they update regularly.
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
@@ -12,8 +11,7 @@
 * [Contact](#contact)
 
 ## General info
-The app was created to get a quick snapshot of how the world is doing when it come to covid-19. Instead of having to look for the information through multiple resourse this app would give you a quick insight into covid data.
-
+The app was created to simplify the process of finding information on Covid-19 and eliminates the need of working through multiple resources. It gives a quick snapshot of the most useful information both by country and worldwide as it changes in real-time. 
 ## Screenshot
 ![App Screenshot](https://i.imgur.com/dzquVxn.png)
 
