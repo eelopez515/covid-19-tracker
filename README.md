@@ -11,7 +11,7 @@
 * [Contact](#contact)
 
 ## General info
-The app was created to simplify the process of finding information on Covid-19 and eliminates the need of working through multiple resources. It gives a quick snapshot of the most useful information both by country and worldwide as it changes in real-time. 
+The app was created to simplify the process of finding information on Covid-19 and eliminates the need for working through multiple resources. It gives a quick, easy to read snapshot of the most useful information both by country and worldwide as it changes in real-time. 
 ## Screenshot
 ![App Screenshot](https://i.imgur.com/dzquVxn.png)
 
