@@ -23,10 +23,10 @@ The app was created to simplify the process of finding information on Covid-19 a
 * Diseas.sh API
 
 ## Setup
-To Run this App Locally Do The Following:
-* First install Node to use NPM - [Install Node](https://nodejs.org/en/)
-* Then Clone this project - [Steps to Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-* Then in terminal do as follows:
+Here are the following steps to run this app locally:
+* First, install Node to use NPM - [Install Node](https://nodejs.org/en/)
+* Next, Clone this project - [Steps to Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+* Then, enter into the terminal as follows:
 ```
 $ cd <file location>
 $ npm install
@@ -57,9 +57,9 @@ function Map({ center, zoom, countries, casesType }) {
 ```
 
 ## Features
-* Shows Circles on Map that represents covid-19 data
-* Shows Data for different countries
-* Shows Graph representing covid-19 data
+* Displays population cirles on Map representing covid-19 spikes
+* Shows Data charts listing total cases for each country
+* Shows Graph detailing case numbers for each category as they update
 
 To-do list for future versions:
 * Dark Mode to make the App easier on the eyes in the dark
