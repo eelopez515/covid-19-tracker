@@ -24,11 +24,11 @@ The app was created to simplify the process of finding information on Covid-19 a
 
 ## Setup
 Here are the following steps to run this app locally:
-* First, install Node to use NPM - [Install Node](https://nodejs.org/en/)
-* Next, Clone this project - [Steps to Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-* Then, enter into the terminal as follows:
+1. Install [Node](https://nodejs.org/en/) to use the package manager (NPM) needed to access the code 
+2. [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this project from Github to use with Node
+3. Enter into the Node terminal as follows:
 ```
-$ cd <file location>
+$ cd <file location> 
 $ npm install
 $ npm start
 ```
