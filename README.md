@@ -62,14 +62,14 @@ function Map({ center, zoom, countries, casesType }) {
 * Shows Graph detailing case numbers for each category as they update
 
 To-do list for future versions:
-* Dark Mode to make the App easier on the eyes in the dark
-* When choosing a country the Map will zoom in on that country
+* Map Transitions for specific countries when they are highlighted
+* Dark Mode Style 
 
 ## Status
 Project is: _in progress_ this is version 1
 
 ## Inspiration
-Inspired by Data shown in google when Covid-19 is searched
+Growing data for Covid-19 
 
 ## Contact
 _Feel Free To Contact Me_<br>
